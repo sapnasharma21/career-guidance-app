@@ -11,16 +11,13 @@ const createAnalysis = async (req, res) => {
       return res.status(400).json({ message: 'resumeId and targetRole are required' });
     }
 
-    // resume dhundo, aur confirm karo ye isi user ka hai
     const resume = await Resume.findOne({ _id: resumeId, userId: req.userId });
     if (!resume) {
       return res.status(404).json({ message: 'Resume not found' });
     }
 
-    // OpenAI ko bhejo
     const aiResult = await analyzeResume(resume.extractedText, targetRole);
 
-    // database mein save karo
     const analysis = await Analysis.create({
       userId: req.userId,
       resumeId: resume._id,
@@ -37,4 +34,17 @@ const createAnalysis = async (req, res) => {
   }
 };
 
-module.exports = { createAnalysis };
+// GET HISTORY - saari past analyses laao (naya wala sabse upar)
+const getHistory = async (req, res) => {
+  try {
+    const analyses = await Analysis.find({ userId: req.userId })
+      .sort({ createdAt: -1 })
+      .select('targetRole currentSkills skillGaps createdAt');
+
+    res.status(200).json(analyses);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = { createAnalysis, getHistory };

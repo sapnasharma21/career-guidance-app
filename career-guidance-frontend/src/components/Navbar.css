@@ -31,6 +31,18 @@
   gap: 1.25rem;
 }
 
+.navbar__link {
+  color: #C7CEDB;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.navbar__link:hover {
+  color: #E9C46A;
+}
+
 .navbar__user {
   color: #C7CEDB;
   font-size: 0.9rem;
