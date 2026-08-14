@@ -1,0 +1,126 @@
+.upload-page {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAFAF7;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+}
+
+.upload-card {
+  width: 100%;
+  max-width: 460px;
+}
+
+.upload-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2D6A4F;
+}
+
+.upload-card h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #14213D;
+  margin: 0.5rem 0 0.6rem;
+}
+
+.upload-sub {
+  color: #6B7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 2.5rem 1rem;
+  border: 1.5px dashed #C7CEDB;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  text-align: center;
+}
+
+.upload-dropzone:hover {
+  border-color: #2D6A4F;
+  background: #F5FAF7;
+}
+
+.upload-dropzone__icon {
+  font-size: 1.4rem;
+  color: #2D6A4F;
+}
+
+.upload-dropzone__text {
+  font-size: 0.9rem;
+  color: #4B5566;
+  word-break: break-all;
+}
+
+.upload-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4B5566;
+}
+
+.upload-field input {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #E0E0DA;
+  border-radius: 6px;
+  outline: none;
+}
+
+.upload-field input:focus {
+  border-color: #2D6A4F;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.12);
+}
+
+.upload-form button {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FAFAF7;
+  background: #14213D;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.upload-form button:hover:not(:disabled) {
+  background: #2D6A4F;
+}
+
+.upload-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-error {
+  font-size: 0.85rem;
+  color: #B3261E;
+  margin: -0.5rem 0 0;
+}

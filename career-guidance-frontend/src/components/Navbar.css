@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 2rem;
+  background: #14213D;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FAFAF7;
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E9C46A;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navbar__user {
+  color: #C7CEDB;
+  font-size: 0.9rem;
+}
+
+.navbar__logout {
+  padding: 0.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #FAFAF7;
+  background: transparent;
+  border: 1px solid #3A4A6B;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.navbar__logout:hover {
+  background: #2D6A4F;
+  border-color: #2D6A4F;
+}
